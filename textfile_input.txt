@@ -1,0 +1,85 @@
+#
+#     B2G Summary results
+#
+# Comments are python-style.
+#
+#
+#
+#
+#
+#
+#       T' Analyses
+#
+#
+#------------
+# B2G-15-015
+#------------
+T'	0.7	8	T'#rightarrowbW(combined) 0
+T'	0.7	8	T'#rightarrowtH(combined) 0
+T'	0.8	8	T'#rightarrowtZ(combined) 0
+#
+#
+#         B' Analyses
+#
+#------------
+# B2G-12-019
+#------------
+B'	0.7	8	B'#rightarrowtW(semilep) 0
+B'	0.7	8	B'#rightarrowbH(semilep) 0
+B'	0.6	8	B'#rightarrowbZ(semilep) 0
+#------------
+# B2G-12-021
+#------------
+B'	0.7	8	B'#rightarrowbZ(dilep) 0
+#------------
+# B2G-12-020
+#------------
+# None yet
+#------------
+# B2G-13-003
+#------------
+B'	0.8	8	B'#rightarrowtW(multilep) 0
+B'	0.7	8	B'#rightarrowbH(multilep) 0
+B'	0.5	8	B'#rightarrowbZ(multilep) 0
+#
+#
+#       Z' Analyses
+#
+#
+#------------
+# B2G-12-005
+#------------
+Z'	1.6	8	Z'(1.2%)(all-had) 0
+Z'	1.8	8	g_{KK}(all-had) 0
+#------------
+# B2G-12-006
+#------------
+Z'	2.1	8	Z'(1.2%)(semilep) 0
+Z'	2.5	8	g_{KK}(semilep) 0
+#------------
+# B2G-13-001
+#------------
+Z'	2.1	8	Z'(1.2%)(combined) 0
+Z'	2.5	8	g_{KK}(combined) 0
+#
+#
+#       W' Analyses
+#
+#
+#------------
+# B2G-12-010
+#------------
+W'	2.0	8	W'(lep) 0
+#
+#
+#       t* Analyses
+#
+#
+#------------
+# B2G-12-014
+#------------
+t*	0.8	8	t*(semilep) 0
+#------------
+# B2G-12-008
+#------------
+t*	0.7	8	t*(dilep) 0
