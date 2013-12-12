@@ -17,6 +17,7 @@
 T'	0.7	8	T'#rightarrowbW(combined) 0
 T'	0.7	8	T'#rightarrowtH(combined) 0
 T'	0.8	8	T'#rightarrowtZ(combined) 0
+T'      0.8     8       T'(5/3)(dilep,ss)         0
 #
 #
 #         B' Analyses

@@ -195,5 +195,5 @@ for key in [  "B'", "T'", "t*", "W'", "Z'"] :
     paves.append(p)
 
 c_all.Update()
-c_all.Print("b2g_summary.pdf", "pdf")
-c_all.Print("b2g_summary.png", "png")
+c_all.Print("b2g_summary_updated.pdf", "pdf")
+c_all.Print("b2g_summary_updated.png", "png")
