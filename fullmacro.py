@@ -42,7 +42,7 @@ styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
           "B'":[TColor.kRed,     "Vector-like B'",      0],
           "DM":[TColor.kViolet,  "Dark matter",         0],
           "Z'":[TColor.kBlue,    "t#bar{t} Resonances", 1],
-          "W'":[8,  "tb Resonances",       1],
+          "W'":[TColor.kGreen+3, "tb Resonances",       1],
           "t*":[TColor.kViolet,  "Excited tops",        1]
 }
 
@@ -50,7 +50,7 @@ styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
 # Location of text boxes : change this by eye!
 ##############################################################################################
 texts = {
-    "B'":[0.5, 0.2, 0.95, 0.3],
+    "B'":[0.5, 0.3, 0.95, 0.4],
     "T'":[0.5, 0.8, 0.95, 0.9],
     "DM":[0,   0,   0,   0],
     "Z'":[0.65,0.8, 0.95, 0.9],
@@ -199,6 +199,8 @@ for key in [  "B'", "T'", "t*", "W'", "Z'"] :
     p.AddText( style[1] )
     p.SetFillColor( style[0] )
     p.SetTextColor(0)
+    p.SetTextFont(43)
+    p.SetTextSize(20)
     p.Draw()
     paves.append(p)
 
