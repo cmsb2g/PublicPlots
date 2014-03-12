@@ -40,7 +40,7 @@ gStyle.SetLabelSize(16, "XYZ")
 ##############################################################################################
 styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
           "B'":[TColor.kRed,     "Vector-like B'",      0],
-          "DM":[TColor.kViolet,  "Dark matter",         0],
+          "DM":[TColor.kCyan+2,  "Dark matter",         0],
           "Z'":[TColor.kBlue,    "t#bar{t} Resonances", 1],
           "W'":[TColor.kGreen+3, "tb Resonances",       1],
           "t*":[TColor.kViolet,  "Excited tops",        1]
@@ -50,9 +50,9 @@ styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
 # Location of text boxes : change this by eye!
 ##############################################################################################
 texts = {
-    "B'":[0.5, 0.3, 0.95, 0.4],
+    "B'":[0.5, 0.5, 0.95, 0.6],
     "T'":[0.5, 0.8, 0.95, 0.9],
-    "DM":[0,   0,   0,   0],
+    "DM":[0.5, 0.2, 0.95, 0.3],
     "Z'":[0.65,0.8, 0.95, 0.9],
     "t*":[0.65, 0.15, 0.95, 0.25],
     "W'":[0.65, 0.3, 0.95, 0.4],
@@ -100,7 +100,7 @@ histstodraw[1].SetMaximum(options.maxval)
 labels = [ ]
 plotbins = [ 0, 0 ]  # Current bin for each plot
 canvs = []  # Canvases for the various categories
-for key  in [  "B'", "T'", "t*", "W'", "Z'"] :
+for key  in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
     value = masters[key]
     print 'key =  ' + str (key)
     print 'value = '
@@ -178,7 +178,7 @@ for ihist in range(len(histstodraw)) :
     hist.Draw('axis hbar')
 
 # Now draw all of the different categories
-for key in [  "B'", "T'", "t*", "W'", "Z'"]  :
+for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"]  :
     val = hists[key]
     side = val[0]
     hist = val[1]
@@ -191,7 +191,7 @@ for key in [  "B'", "T'", "t*", "W'", "Z'"]  :
 
 # Finall draw the labels
 paves = []
-for key in [  "B'", "T'", "t*", "W'", "Z'"] :
+for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
     vals = texts[key]
     style = styles[key]
     c.cd(style[2] + 1)
