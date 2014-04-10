@@ -176,6 +176,7 @@ for ihist in range(len(histstodraw)) :
     gPad.SetLeftMargin(0.3)
     gPad.SetRightMargin(0.05)
     gPad.SetGridx()
+    hist.GetYaxis().SetTitle( 'Excluded Mass (TeV)')
     #hist.GetXaxis().SetNdivisions(0)
     #hist.GetYaxis().SetNdivisions(options.maxval + 2)
     hist.Draw('axis hbar')
@@ -204,7 +205,7 @@ for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
     p.SetFillColor( style[0] )
     p.SetTextColor(0)
     p.SetTextFont(43)
-    p.SetTextSize(20)
+    p.SetTextSize(30)
     p.Draw()
     paves.append(p)
 
