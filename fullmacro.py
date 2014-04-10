@@ -10,10 +10,15 @@ parser.add_option('--inputfile', metavar='F', type='string', action='store',
                   dest='inputfile',
                   help='Name of input file')
 
-parser.add_option('--maxval', metavar='F', type='int', action='store',
+parser.add_option('--maxval0', metavar='F', type='int', action='store',
+                  default=1.5,
+                  dest='maxval0',
+                  help='Maximum value of the XTY plots')
+
+parser.add_option('--maxval1', metavar='F', type='int', action='store',
                   default=5,
-                  dest='maxval',
-                  help='Maximum value of the plots')
+                  dest='maxval1',
+                  help='Maximum value of the RES plots')
 
 
 (options, args) = parser.parse_args()
@@ -51,9 +56,9 @@ styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
 # Location of text boxes : change this by eye!
 ##############################################################################################
 texts = {
-    "B'":[0.5, 0.5, 0.95, 0.6],
-    "T'":[0.5, 0.8, 0.95, 0.9],
-    "DM":[0.5, 0.2, 0.95, 0.3],
+    "B'":[0.65, 0.5, 0.95, 0.6],
+    "T'":[0.65, 0.8, 0.95, 0.9],
+    "DM":[0.65, 0.2, 0.95, 0.3],
     "Z'":[0.65,0.8, 0.95, 0.9],
     "t*":[0.65, 0.15, 0.95, 0.25],
     "W'":[0.65, 0.3, 0.95, 0.4],
@@ -95,8 +100,8 @@ histstodraw = [
     ]
 
 # Set the maximum to the user's desire
-histstodraw[0].SetMaximum(options.maxval)
-histstodraw[1].SetMaximum(options.maxval)
+histstodraw[0].SetMaximum(options.maxval0)
+histstodraw[1].SetMaximum(options.maxval1)
 #  labels includes   [bin number,    value,    label]
 labels = [ ]
 plotbins = [ 0, 0 ]  # Current bin for each plot
@@ -119,11 +124,11 @@ for key  in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
     if hists.has_key( key ) == False : 
         hist = TH1F( key, "", nbins, 0, nbins )
         hist.SetFillColor( styles[key][0]     )
-        hist.SetMaximum( options.maxval )
+        #hist.SetMaximum( maxval[] )
         hist.SetBarWidth(0.8)
         hist.SetBarOffset(0.1)
         hist.GetXaxis().SetNdivisions(0)
-        hist.GetYaxis().SetNdivisions(options.maxval + 2)
+        #hist.GetYaxis().SetNdivisions(options.maxval + 2)
         hists[key] = [ styles[key][2], hist]
 
     # Now add the individual mass limits to each category
