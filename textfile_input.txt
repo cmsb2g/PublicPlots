@@ -51,6 +51,10 @@ B'	0.5	8	B'#rightarrowbZ(multilep) 0
 #------------
 DM	0.3	8	t+MET,scalar(had) 0
 DM	0.7	8	t+MET,vectorial(had) 0
+#------------
+# B2G-13-004
+#------------
+DM	0.1	8	ttbar+MET,scalar(dil) 0
 #
 #
 #       Z' Analyses

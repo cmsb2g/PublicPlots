@@ -31,7 +31,8 @@ gStyle.SetTitleFont(43, "XYZ")
 gStyle.SetTitleSize(30, "XYZ")
 gStyle.SetTitleOffset(3.5, "X")
 gStyle.SetLabelFont(43, "XYZ")
-gStyle.SetLabelSize(16, "XYZ")
+gStyle.SetLabelSize(16, "X")
+gStyle.SetLabelSize(30, "YZ")
 
 
 ##############################################################################################
@@ -146,7 +147,7 @@ for key  in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
 
 
 # Draw the histograms together
-c_all = TCanvas('ca', 'ca',  1100, 850)
+c_all = TCanvas('ca', 'ca',  int(1100*1.5), int(850*1.5))
 ctitle = TPad("ctitle", "ctitle", 0.0, 0.90, 1.0, 1.0)
 ctitle.Draw()
 ctitle.cd()
@@ -175,6 +176,8 @@ for ihist in range(len(histstodraw)) :
     gPad.SetLeftMargin(0.3)
     gPad.SetRightMargin(0.05)
     gPad.SetGridx()
+    #hist.GetXaxis().SetNdivisions(0)
+    #hist.GetYaxis().SetNdivisions(options.maxval + 2)
     hist.Draw('axis hbar')
 
 # Now draw all of the different categories
@@ -187,6 +190,7 @@ for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"]  :
     gPad.SetRightMargin(0.05)
     gPad.SetGridx()
     hist.Draw('hbar same')
+    #gPad.SetLogx()
     ihist += 1
 
 # Finall draw the labels
