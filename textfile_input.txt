@@ -12,11 +12,18 @@
 #
 #
 #------------
-# B2G-15-015
+# B2G-14-002
 #------------
-T'	0.7	8	T'#rightarrowbW(combined) 0
-T'	0.7	8	T'#rightarrowtH(combined) 0
-T'	0.8	8	T'#rightarrowtZ(combined) 0
+T'	0.7	8	T'#rightarrowtH(hadronic) 0
+#------------
+# B2G-12-015
+#------------
+T'	0.7	8	T'#rightarrowbW(semilep+lep) 0
+T'	0.7	8	T'#rightarrowtH(semilep+lep) 0
+T'	0.8	8	T'#rightarrowtZ(semilep+lep) 0
+#------------
+# B2G-12-012
+#------------
 T'      0.8     8       T'(5/3)(dilep,ss)         0
 #
 #
