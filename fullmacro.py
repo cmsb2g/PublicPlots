@@ -20,6 +20,10 @@ parser.add_option('--maxval1', metavar='F', type='int', action='store',
                   dest='maxval1',
                   help='Maximum value of the RES plots')
 
+parser.add_option('--batch', action='store_true',
+                  default=False,
+                  dest='batch',
+                  help='Run ROOT in batch mode')
 
 (options, args) = parser.parse_args()
 
@@ -27,6 +31,8 @@ argv = []
 
 
 from ROOT import *
+if options.batch == True :
+    gROOT.SetBatch()
 
 # Set Style issues
 gROOT.Macro("rootlogon.C")
@@ -219,3 +225,4 @@ for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"] :
 c_all.Update()
 c_all.Print("b2g_summary_updated.pdf", "pdf")
 c_all.Print("b2g_summary_updated.png", "png")
+
