@@ -49,7 +49,8 @@ styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
           "DM":[TColor.kCyan+2,  "Dark matter",         0],
           "Z'":[TColor.kBlue,    "t#bar{t} Resonances", 1],
           "W'":[TColor.kGreen+3, "tb Resonances",       1],
-          "t*":[TColor.kViolet,  "Excited tops",        1]
+          "t*":[TColor.kViolet,  "Excited tops",        1],
+          "LLt":[TColor.kOrange+7, "Displaced tops",      1],
 }
 
 ##############################################################################################
@@ -60,8 +61,9 @@ texts = {
     "T'":[0.65, 0.8, 0.95, 0.9],
     "DM":[0.65, 0.2, 0.95, 0.3],
     "Z'":[0.65,0.8, 0.95, 0.9],
-    "t*":[0.65, 0.15, 0.95, 0.25],
-    "W'":[0.65, 0.3, 0.95, 0.4],
+    "t*":[0.65, 0.28, 0.95, 0.38],
+    "W'":[0.65, 0.4, 0.95, 0.5],
+    "LLt":[0.65, 0.15, 0.95, 0.25]
     }
 
 
@@ -75,7 +77,7 @@ masters = dict()
 for line in lines :
     if line[0] == '#' :
         continue
-    toks = line.split()
+    toks = line.split("\t")
     if not masters.has_key( toks[0] ) :
         masters[toks[0]] = []
     #    limit           COM            ana name  color               class of ana        left(0) or right(1)
@@ -106,7 +108,7 @@ histstodraw[1].SetMaximum(options.maxval1)
 labels = [ ]
 plotbins = [ 0, 0 ]  # Current bin for each plot
 canvs = []  # Canvases for the various categories
-for key  in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
+for key  in [ "DM", "B'", "T'",  "LLt", "t*", "W'", "Z'"] :
     value = masters[key]
     print 'key =  ' + str (key)
     print 'value = '
@@ -187,7 +189,7 @@ for ihist in range(len(histstodraw)) :
     hist.Draw('axis hbar')
 
 # Now draw all of the different categories
-for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"]  :
+for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"]  :
     val = hists[key]
     side = val[0]
     hist = val[1]
@@ -201,7 +203,7 @@ for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"]  :
 
 # Finall draw the labels
 paves = []
-for key in [ "DM", "B'", "T'", "t*", "W'", "Z'"] :
+for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"] :
     vals = texts[key]
     style = styles[key]
     c.cd(style[2] + 1)

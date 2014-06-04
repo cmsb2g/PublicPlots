@@ -14,17 +14,21 @@
 #------------
 # B2G-14-002
 #------------
-T'	0.7	8	T'#rightarrowtH(hadronic) 0
+T'	0.7	8	T'#rightarrowtH(hadronic)
+#------------
+# B2G-14-003
+#------------
+T'	0.5	8	T'#rightarrowtH(H#rightarrow#gamma#gamma)
 #------------
 # B2G-12-015
 #------------
-T'	0.7	8	T'#rightarrowbW(semilep+lep) 0
-T'	0.7	8	T'#rightarrowtH(semilep+lep) 0
-T'	0.8	8	T'#rightarrowtZ(semilep+lep) 0
+T'	0.7	8	T'#rightarrowbW(semilep+lep)
+T'	0.7	8	T'#rightarrowtH(semilep+lep)
+T'	0.8	8	T'#rightarrowtZ(semilep+lep)
 #------------
 # B2G-12-012
 #------------
-T'      0.8     8       T'(5/3)(dilep,ss)         0
+T'	0.8	8	T'(5/3)(dilep,ss)        
 #
 #
 #         B' Analyses
@@ -32,23 +36,23 @@ T'      0.8     8       T'(5/3)(dilep,ss)         0
 #------------
 # B2G-12-019
 #------------
-B'	0.7	8	B'#rightarrowtW(semilep) 0
-B'	0.7	8	B'#rightarrowbH(semilep) 0
-B'	0.6	8	B'#rightarrowbZ(semilep) 0
+B'	0.7	8	B'#rightarrowtW(semilep)
+B'	0.7	8	B'#rightarrowbH(semilep)
+B'	0.6	8	B'#rightarrowbZ(semilep)
 #------------
 # B2G-12-021
 #------------
-B'	0.7	8	B'#rightarrowbZ(dilep) 0
+B'	0.7	8	B'#rightarrowbZ(dilep)
 #------------
 # B2G-12-020
 #------------
-# None yet
+B'	0.8	8	B'#rightarrowtW(ss-dilep)
 #------------
 # B2G-13-003
 #------------
-B'	0.8	8	B'#rightarrowtW(multilep) 0
-B'	0.7	8	B'#rightarrowbH(multilep) 0
-B'	0.5	8	B'#rightarrowbZ(multilep) 0
+B'	0.8	8	B'#rightarrowtW(multilep)
+B'	0.7	8	B'#rightarrowbH(multilep)
+B'	0.5	8	B'#rightarrowbZ(multilep)
 #
 #
 #         DM Analyses
@@ -56,12 +60,12 @@ B'	0.5	8	B'#rightarrowbZ(multilep) 0
 #------------
 # B2G-12-022
 #------------
-DM	0.3	8	t+MET,scalar(had) 0
-DM	0.7	8	t+MET,vectorial(had) 0
+DM	0.3	8	t+MET,scalar(had)
+DM	0.7	8	t+MET,vectorial(had)
 #------------
 # B2G-13-004
 #------------
-DM	0.1	8	ttbar+MET,scalar(dil) 0
+DM	0.1	8	ttbar+MET,scalar(dil)
 #
 #
 #       Z' Analyses
@@ -70,18 +74,18 @@ DM	0.1	8	ttbar+MET,scalar(dil) 0
 #------------
 # B2G-12-005
 #------------
-Z'	1.6	8	Z'(1.2%)(all-had) 0
-Z'	1.8	8	g_{KK}(all-had) 0
+Z'	1.6	8	Z'(1.2%)(all-had)
+Z'	1.8	8	g_{KK}(all-had)
 #------------
 # B2G-12-006
 #------------
-Z'	2.1	8	Z'(1.2%)(semilep) 0
-Z'	2.5	8	g_{KK}(semilep) 0
+Z'	2.1	8	Z'(1.2%)(semilep)
+Z'	2.5	8	g_{KK}(semilep)
 #------------
 # B2G-13-001
 #------------
-Z'	2.1	8	Z'(1.2%)(combined) 0
-Z'	2.5	8	g_{KK}(combined) 0
+Z'	2.1	8	Z'(1.2%)(combined)
+Z'	2.5	8	g_{KK}(combined)
 #
 #
 #       W' Analyses
@@ -90,7 +94,7 @@ Z'	2.5	8	g_{KK}(combined) 0
 #------------
 # B2G-12-010
 #------------
-W'	2.0	8	W'(lep) 0
+W'	2.0	8	W'(lep)
 #
 #
 #       t* Analyses
@@ -99,8 +103,12 @@ W'	2.0	8	W'(lep) 0
 #------------
 # B2G-12-014
 #------------
-t*	0.8	8	t*(semilep) 0
+t*	0.8	8	t*(semilep)
 #------------
 # B2G-12-008
 #------------
-t*	0.7	8	t*(dilep) 0
+t*	0.7	8	t*(dilep)
+#------------
+# B2G-12-024
+#------------
+LLt	0.8	8	c#tau(#tilde{t})=2 cm(e+#mu)
