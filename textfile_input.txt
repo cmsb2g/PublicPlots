@@ -34,11 +34,15 @@ T'	0.8	8	T'(5/3)(dilep,ss)
 #         B' Analyses
 #
 #------------
+# B2G-14-001
+#------------
+B'	0.8	8	B'#rightarrowbH(hadronic)
+#------------
 # B2G-12-019
 #------------
 B'	0.7	8	B'#rightarrowtW(semilep)
-B'	0.7	8	B'#rightarrowbH(semilep)
-B'	0.6	8	B'#rightarrowbZ(semilep)
+B'	0.6	8	B'#rightarrowbH(semilep)
+B'	0.7	8	B'#rightarrowbZ(semilep)
 #------------
 # B2G-12-021
 #------------
@@ -51,22 +55,27 @@ B'	0.8	8	B'#rightarrowtW(ss-dilep)
 # B2G-13-003
 #------------
 B'	0.8	8	B'#rightarrowtW(multilep)
-B'	0.7	8	B'#rightarrowbH(multilep)
-B'	0.5	8	B'#rightarrowbZ(multilep)
+B'	0.5	8	B'#rightarrowbH(multilep)
+B'	0.7	8	B'#rightarrowbZ(multilep)
 #
 #
 #         DM Analyses
+#
+#------------
+# B2G-14-004
+#------------
+DM	0.1	8	ttbar+MET,scalar(semilep)
+#
+#------------
+# B2G-13-004
+#------------
+DM	0.1	8	ttbar+MET,scalar(dil)
 #
 #------------
 # B2G-12-022
 #------------
 DM	0.3	8	t+MET,scalar(had)
 DM	0.7	8	t+MET,vectorial(had)
-#------------
-# B2G-13-004
-#------------
-DM	0.1	8	ttbar+MET,scalar(dil)
-#
 #
 #       Z' Analyses
 #
