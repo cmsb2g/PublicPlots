@@ -19,6 +19,10 @@ T'	0.7	8	T'#rightarrowtH(hadronic)
 # B2G-14-003
 #------------
 T'	0.5	8	T'#rightarrowtH(H#rightarrow#gamma#gamma)
+#-----------
+# B2G-12-017
+#------------
+T'	0.9	8	T'#rightarrowbW(semilep+M)
 #------------
 # B2G-12-015
 #------------
@@ -30,7 +34,12 @@ T'	0.8	8	T'#rightarrowtZ(semilep+lep)
 #------------
 T'	0.8	8	T'(5/3)(dilep,ss)        
 #
+#-----------
+# B2G-12-017
+#------------
+Q'	0.8	8	Q'#rightarrowqW(semilep+M)
 #
+#-----------
 #         B' Analyses
 #
 #------------

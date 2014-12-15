@@ -50,26 +50,28 @@ gStyle.SetLabelSize(30, "YZ")
 # Define the styles for each of the measurement
 #         Name    Color           Title           Left(0) or right(1)
 ##############################################################################################
-styles = {"T'":[TColor.kMagenta, "Vector-like T'",      0],
-          "B'":[TColor.kRed,     "Vector-like B'",      0],
-          "DM":[TColor.kCyan+2,  "Dark matter",         0],
-          "Z'":[TColor.kBlue,    "t#bar{t} Resonances", 1],
-          "W'":[TColor.kGreen+3, "tb Resonances",       1],
+styles = {"T'":[TColor.kGreen+1, "Vector-like T'",      0],
+          "Q'":[TColor.kOrange-2,   "Vector-like Q'",    0],
+          "B'":[TColor.kGreen+3,     "Vector-like B'",      0],
+          "DM":[TColor.kGray+3,  "Dark matter",         0],
+          "Z'":[TColor.kAzure+1,    "t#bar{t} Resonances", 1],
+          "W'":[TColor.kBlue+2, "tb Resonances",       1],
           "t*":[TColor.kViolet,  "Excited tops",        1],
-          "LLt":[TColor.kOrange+7, "Displaced tops",      1],
+          "LLt":[TColor.kMagenta+2, "Displaced tops",    1],
 }
 
 ##############################################################################################
 # Location of text boxes : change this by eye!
 ##############################################################################################
 texts = {
+    "Q'":[0.68, 0.95, 0.95, 0.99],
     "B'":[0.68, 0.5, 0.95, 0.58],
     "T'":[0.68, 0.8, 0.95, 0.88],
     "DM":[0.68, 0.2, 0.95, 0.28],
     "Z'":[0.65,0.7, 0.95, 0.78],
     "t*":[0.65, 0.24, 0.95, 0.32],
     "W'":[0.65, 0.355, 0.95, 0.435],
-    "LLt":[0.65, 0.15, 0.95, 0.23]
+    "LLt":[0.65, 0.14, 0.95, 0.19]
     }
 
 
@@ -114,7 +116,7 @@ histstodraw[1].SetMaximum(options.maxval1)
 labels = [ ]
 plotbins = [ 0, 0 ]  # Current bin for each plot
 canvs = []  # Canvases for the various categories
-for key  in [ "DM", "B'", "T'",  "LLt", "t*", "W'", "Z'"] :
+for key  in [ "DM", "B'", "T'", "Q'", "LLt", "t*", "W'", "Z'"] :
     value = masters[key]
     print 'key =  ' + str (key)
     print 'value = '
@@ -195,7 +197,7 @@ for ihist in range(len(histstodraw)) :
     hist.Draw('axis hbar')
 
 # Now draw all of the different categories
-for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"]  :
+for key in [ "DM", "B'", "T'", "Q'", "LLt", "t*", "W'", "Z'"]  :
     val = hists[key]
     side = val[0]
     hist = val[1]
@@ -209,7 +211,7 @@ for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"]  :
 
 # Finall draw the labels
 paves = []
-for key in [ "DM", "B'", "T'", "LLt", "t*", "W'", "Z'"] :
+for key in [ "DM", "B'", "T'", "Q'", "LLt", "t*", "W'", "Z'"] :
     vals = texts[key]
     style = styles[key]
     c.cd(style[2] + 1)

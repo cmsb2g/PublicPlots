@@ -1,9 +1,9 @@
 {
-  gSystem->Load("libFWCoreFWLite"); 
-  AutoLibraryLoader::enable();
-  gSystem->Load("libDataFormatsFWLite");
-  gROOT->ProcessLine("namespace edm {typedef edm::Wrapper<vector<float> > Wrapper<vector<float,allocator<float> > >; }");
-  gROOT->ProcessLine("namespace edm {typedef edm::Wrapper<vector<double> > Wrapper<vector<double,allocator<double> > >; }");
+//  gSystem->Load("libFWCoreFWLite"); 
+//  AutoLibraryLoader::enable();
+  //gSystem->Load("libDataFormatsFWLite");
+//  gROOT->ProcessLine("namespace edm {typedef edm::Wrapper<vector<float> > Wrapper<vector<float,allocator<float> > >; }");
+ // gROOT->ProcessLine("namespace edm {typedef edm::Wrapper<vector<double> > Wrapper<vector<double,allocator<double> > >; }");
 
   TStyle *tdrStyle = new TStyle("tdrStyle","Style for P-TDR");
 
